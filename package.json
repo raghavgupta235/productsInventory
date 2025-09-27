@@ -1,0 +1,24 @@
+{
+  "name": "productsinventory",
+  "version": "1.0.0",
+  "description": "Products Inventory API Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "echo 'Build completed - ready for production'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["products", "inventory", "api", "mongodb"],
+  "author": "New Era Resin Arts",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
