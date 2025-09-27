@@ -117,13 +117,13 @@ This API can be deployed as Netlify Functions for serverless architecture:
 ### Traditional Server Deployment
 
 This server can also be deployed to any Node.js hosting platform like:
-- Heroku
+- **Vercel** (Recommended - see vercel.json)
 - Railway
 - Render
+- Heroku
 - DigitalOcean App Platform
 - AWS EC2
 - Google Cloud Run
-- Vercel
 
 Make sure to set the environment variables in your deployment platform.
 
@@ -138,7 +138,19 @@ FRONTEND_URL=https://your-frontend-domain.com
 PORT=3001
 ```
 
-### Quick Deploy with Railway (Recommended)
+### Quick Deploy with Vercel (Recommended)
+
+1. Go to [Vercel.com](https://vercel.com)
+2. Connect your GitHub account
+3. Import your repository
+4. Vercel will automatically detect the `vercel.json` configuration
+5. Set environment variables in Vercel dashboard:
+   - `MONGODB_URI`
+   - `NODE_ENV=production`
+   - `FRONTEND_URL`
+6. Deploy!
+
+### Quick Deploy with Railway
 
 1. Go to [Railway.app](https://railway.app)
 2. Connect your GitHub account
