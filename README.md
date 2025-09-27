@@ -36,7 +36,11 @@ npm install
 2. Set up environment variables:
 ```bash
 # Copy the example and modify as needed
-cp .env.example .env
+cp env.example .env
+
+# Or use specific environment files
+cp env.example env.development
+cp env.example env.production
 ```
 
 3. Build and start the server:
@@ -44,20 +48,36 @@ cp .env.example .env
 # Development (with auto-reload)
 npm run dev
 
+# Development with specific env file
+npm run dev:env
+
 # Production build and start
 npm run build
 npm start
 
-# Or start directly (if no build step needed)
-npm start
+# Production with specific env file
+npm run start:env
 ```
 
 ## Environment Variables
 
+### Available Environment Files:
+- `env.example` - Template file with all required variables
+- `env.development` - Development environment settings
+- `env.production` - Production environment settings
+- `.env` - Default environment file (if you prefer this naming)
+
+### Required Variables:
 - `MONGODB_URI` - MongoDB connection string
 - `PORT` - Server port (default: 3001)
 - `NODE_ENV` - Environment (development/production)
 - `FRONTEND_URL` - Frontend URL for CORS (default: http://localhost:5173)
+
+### Available Scripts:
+- `npm run dev` - Development with NODE_ENV=development
+- `npm run dev:env` - Development using env.development file
+- `npm start` - Production using env.production file (requires dotenv-cli)
+- `npm run start:env` - Alternative production command
 
 ## Deployment
 
